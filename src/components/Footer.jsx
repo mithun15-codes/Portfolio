@@ -5,6 +5,18 @@ const Footer = () => {
     const { personal } = portfolioData;
     const currentYear = new Date().getFullYear();
 
+    const handleEmailClick = (e) => {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (!isMobile) {
+            e.preventDefault();
+            window.open(
+                `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}`,
+                '_blank',
+                'noopener,noreferrer'
+            );
+        }
+    };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -58,7 +70,7 @@ const Footer = () => {
                                 </a>
                             )}
                             {personal.email && (
-                                <a href={`mailto:${personal.email}`} aria-label="Email">
+                                <a href={`mailto:${personal.email}`} onClick={handleEmailClick} aria-label="Email">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
                                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                                         <polyline points="22,6 12,13 2,6"></polyline>

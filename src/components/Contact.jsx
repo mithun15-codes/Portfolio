@@ -3,6 +3,16 @@ import './Contact.css';
 
 const Contact = () => {
     const { personal } = portfolioData;
+    const mailtoHref = `mailto:${personal.email}`;
+    const gmailComposeHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(personal.email)}`;
+
+    const handleEmailClick = (e) => {
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+        if (!isMobile) {
+            e.preventDefault();
+            window.open(gmailComposeHref, '_blank', 'noopener,noreferrer');
+        }
+    };
 
     return (
         <section id="contact" className="contact section section-alt">
@@ -26,7 +36,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h4>Email</h4>
-                                <a href={`mailto:${personal.email}`}>{personal.email}</a>
+                                <a href={mailtoHref} onClick={handleEmailClick}>{personal.email}</a>
                             </div>
                         </div>
 
@@ -60,7 +70,7 @@ const Contact = () => {
                         <div className="cta-icon-glow">✨</div>
                         <h3>Have a project in mind or an open role?</h3>
                         <p>My inbox is always open. Whether you have a question, opportunity, or simply want to say hello, I will get back to you promptly!</p>
-                        <a href={`mailto:${personal.email}`} className="btn btn-primary btn-lg">
+                        <a href={mailtoHref} onClick={handleEmailClick} className="btn btn-primary btn-lg">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
                                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>

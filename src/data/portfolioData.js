@@ -17,9 +17,8 @@ export const portfolioData = {
         phone: "+91 8281700242",
         location: "Kollam, Kerala, India",
 
-        // Profile Image: no photo supplied yet, so an initials avatar is shown.
-        // To use a photo, add it to /public and set e.g. import.meta.env.BASE_URL + "profile.jpg"
-        profileImage: "",
+        // Profile Image
+        profileImage: import.meta.env.BASE_URL + "profile.jpg",
 
         // Resume PDF
         resumeLink: import.meta.env.BASE_URL + "resume.pdf",

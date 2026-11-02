@@ -2,10 +2,6 @@
 
 Personal developer portfolio website of **Mithun Mohan**, a B.Tech Computer Science & Engineering student specializing in full-stack mobile and backend development with **Python**, **Flutter**, and **FastAPI**.
 
-- **Website:** [mithunmohan.in](https://mithunmohan.in/)
-- **GitHub:** [github.com/mithun15-codes](https://github.com/mithun15-codes)
-- **LinkedIn:** [linkedin.com/in/mithun-mohan15](https://linkedin.com/in/mithun-mohan15)
-
 ---
 
 ## About the Project
@@ -54,6 +50,7 @@ This repository contains the source code for my personal portfolio website. It i
 Portfolio/
 ├── public/
 │   ├── favicon.svg          # Custom site icon
+│   ├── profile.jpg          # Profile photograph
 │   └── resume.pdf           # Downloadable resume PDF
 ├── src/
 │   ├── components/          # Modular React UI sections
@@ -116,11 +113,3 @@ Portfolio/
    ```bash
    npm run deploy
    ```
-
----
-
-## Contact
-
-- **Name:** Mithun Mohan
-- **Email:** [mithunmohan1504@gmail.com](mailto:mithunmohan1504@gmail.com)
-- **Location:** Kollam, Kerala, India

@@ -97,9 +97,17 @@
     line-height: 1.6;
 }
 
+.contact-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    justify-content: center;
+    width: 100%;
+}
+
 .btn-lg {
-    padding: 0.95rem 2.2rem;
-    font-size: 1.05rem;
+    padding: 0.95rem 1.8rem;
+    font-size: 1rem;
     border-radius: var(--radius-md);
 }
 

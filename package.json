@@ -2,7 +2,7 @@
   "name": "portfolio-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://mithun15-codes.github.io/portfolio",
+  "homepage": "https://mithun15-codes.github.io/Portfolio",
   "type": "module",
   "scripts": {
     "dev": "vite",
